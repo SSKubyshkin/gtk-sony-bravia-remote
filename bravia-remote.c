@@ -8,10 +8,18 @@ char* concat(const char *s1, const char *s2) {
 }
 
 void send_command(GtkWidget *widget, gpointer data) {
-  const char *ircc_codes[3] = {
+  const char *ircc_codes[11] = {
     " AAAAAQAAAAEAAAASAw==",
     " AAAAAQAAAAEAAAATAw==",
-    " AAAAAQAAAAEAAAAUAw=="
+    " AAAAAQAAAAEAAAAUAw==",
+    " AAAAAQAAAAEAAAAQAw==",
+    " AAAAAQAAAAEAAAARAw==",
+    " AAAAAQAAAAEAAAB0Aw==",
+    " AAAAAQAAAAEAAAB1Aw==",
+    " AAAAAQAAAAEAAAAzAw==",
+    " AAAAAQAAAAEAAAA0Aw==",
+    " AAAAAQAAAAEAAABlAw==",
+    " AAAAAQAAAAEAAABgAw=="
   };
 
   char *shell = "./send-command.sh";
@@ -35,21 +43,53 @@ static void activate(GtkApplication *app, gpointer user_data) {
   // Pack the container in the window
   gtk_window_set_child(GTK_WINDOW(window), grid);
 
-  button = gtk_button_new_with_label("Volume Up");
+  button = gtk_button_new_with_label("VOL+");
   g_signal_connect(button, "clicked", G_CALLBACK(send_command), GINT_TO_POINTER(0));
   gtk_grid_attach(GTK_GRID(grid), button, 0, 0, 1, 1);
 
-  button = gtk_button_new_with_label("Volume Down");
+  button = gtk_button_new_with_label("VOL-");
   g_signal_connect(button, "clicked", G_CALLBACK(send_command), GINT_TO_POINTER(1));
+  gtk_grid_attach(GTK_GRID(grid), button, 0, 2, 1, 1);
+
+  button = gtk_button_new_with_label("MUTE");
+  g_signal_connect(button, "clicked", G_CALLBACK(send_command), GINT_TO_POINTER(2));
+  gtk_grid_attach(GTK_GRID(grid), button, 0, 3, 1, 1);
+
+  button = gtk_button_new_with_label("CH+");
+  g_signal_connect(button, "clicked", G_CALLBACK(send_command), GINT_TO_POINTER(3));
+  gtk_grid_attach(GTK_GRID(grid), button, 2, 0, 1, 1);
+
+  button = gtk_button_new_with_label("CH-");
+  g_signal_connect(button, "clicked", G_CALLBACK(send_command), GINT_TO_POINTER(4));
+  gtk_grid_attach(GTK_GRID(grid), button, 2, 2, 1, 1);
+
+  button = gtk_button_new_with_label("UP");
+  g_signal_connect(button, "clicked", G_CALLBACK(send_command), GINT_TO_POINTER(5));
   gtk_grid_attach(GTK_GRID(grid), button, 1, 0, 1, 1);
 
-  button = gtk_button_new_with_label("Mute");
-  g_signal_connect(button, "clicked", G_CALLBACK(send_command), GINT_TO_POINTER(2));
-  gtk_grid_attach(GTK_GRID(grid), button, 0, 1, 2, 1);
+  button = gtk_button_new_with_label("DOWN");
+  g_signal_connect(button, "clicked", G_CALLBACK(send_command), GINT_TO_POINTER(6));
+  gtk_grid_attach(GTK_GRID(grid), button, 1, 2, 1, 1);
 
-  button = gtk_button_new_with_label("Quit");
+  button = gtk_button_new_with_label("RIGHT");
+  g_signal_connect(button, "clicked", G_CALLBACK(send_command), GINT_TO_POINTER(7));
+  gtk_grid_attach(GTK_GRID(grid), button, 2, 1, 1, 1);
+
+  button = gtk_button_new_with_label("LEFT");
+  g_signal_connect(button, "clicked", G_CALLBACK(send_command), GINT_TO_POINTER(8));
+  gtk_grid_attach(GTK_GRID(grid), button, 0, 1, 1, 1);
+
+  button = gtk_button_new_with_label("OK");
+  g_signal_connect(button, "clicked", G_CALLBACK(send_command), GINT_TO_POINTER(9));
+  gtk_grid_attach(GTK_GRID(grid), button, 1, 1, 1, 1);
+
+  button = gtk_button_new_with_label("HOME");
+  g_signal_connect(button, "clicked", G_CALLBACK(send_command), GINT_TO_POINTER(10));
+  gtk_grid_attach(GTK_GRID(grid), button, 1, 3, 1, 1);
+
+  button = gtk_button_new_with_label("EXIT");
   g_signal_connect_swapped(button, "clicked", G_CALLBACK(gtk_window_destroy), window);
-  gtk_grid_attach(GTK_GRID(grid), button, 0, 2, 2, 1);
+  gtk_grid_attach(GTK_GRID(grid), button, 2, 3, 1, 1);
 
   gtk_widget_show(window);
 }
