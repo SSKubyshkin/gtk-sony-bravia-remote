@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # A shell script to send a command to a TV. The TV will execute the command and immediately return.
-# Taken from: https://github.com/breunigs/bravia-auth-and-remote
+# Original: https://github.com/breunigs/bravia-auth-and-remote
 
 cmd="<?xml version=\"1.0\"?><s:Envelope xmlns:s=\"http://schemas.xmlsoap.org/soap/envelope/\" s:encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\"><s:Body><u:X_SendIRCC xmlns:u=\"urn:schemas-sony-com:service:IRCC:1\"><IRCCCode>$2</IRCCCode></u:X_SendIRCC></s:Body></s:Envelope>"
 
