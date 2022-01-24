@@ -31,6 +31,10 @@ These are the features that are currently not supported by the application but p
 
 or simply download the code in a zip archive.
 
+### CD into the folder
+
+`cd gtk-sony-bravia-remote'
+
 ### Compile the binary:
 
 `` gcc -o bravia-remote bravia-remote.c `pkg-config --cflags --libs gtk4` ``
