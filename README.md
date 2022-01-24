@@ -25,12 +25,16 @@ These are the features that are currently not supported by the application but p
 
 ## Usage
 
-Clone the repository:
+### Clone the repository:
+
 `git clone https://github.com/SSKubyshkin/gtk-sony-bravia-remote.git`
+
 or simply download the code in a zip archive.
 
-Compile the binary:
-`gcc -o bravia-remote bravia-remote.c `pkg-config --cflags --libs gtk4``
+### Compile the binary:
 
-Launch the application:
+`gcc -o bravia-remote bravia-remote.c \`pkg-config --cflags --libs gtk4\``
+
+### Launch the application:
+
 `./bravia-remote`
