@@ -33,7 +33,7 @@ or simply download the code in a zip archive.
 
 ### Compile the binary:
 
-`gcc -o bravia-remote bravia-remote.c \`pkg-config --cflags --libs gtk4\``
+``gcc -o bravia-remote bravia-remote.c `pkg-config --cflags --libs gtk4```
 
 ### Launch the application:
 
