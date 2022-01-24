@@ -33,7 +33,7 @@ or simply download the code in a zip archive.
 
 ### CD into the folder
 
-`cd gtk-sony-bravia-remote'
+`cd gtk-sony-bravia-remote`
 
 ### Compile the binary:
 
