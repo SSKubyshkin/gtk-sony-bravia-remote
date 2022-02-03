@@ -8,12 +8,9 @@ This is also my very first GTK+/C project! If you're here to help, you're more t
 
 The current version provides you with basic features such as:
 * Volume control;
-* Mute button;
 * TV channel switching;
-* "HOME" button;
-* "RETURN" button;
 * Up, down, right, left arrows;
-* "OK" button.
+* "HOME", "RETURN", "OK" buttons.
 
 ## Planned features
 
