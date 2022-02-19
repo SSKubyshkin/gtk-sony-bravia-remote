@@ -10,12 +10,12 @@ The current version provides you with basic features such as:
 * Volume control;
 * TV channel switching;
 * Up, down, right, left arrows;
-* "HOME", "RETURN", "OK" buttons.
+* "HOME", "RETURN", "OK" buttons;
+* Num keys (0-9).
 
 ## Planned features
 
 These are the features that are currently not supported by the application but planned in the future:
-* Num keys (0-9);
 * Ability to enter an IP address of a TV on your local network;
 * Ability to enter a Pre-Shared Key (PSK);
 * Ability to turn on your TV using MAC address of a device.
